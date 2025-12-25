@@ -1,16 +1,56 @@
 @import "tailwindcss";
 
-*{
-
-
-
-
-    
-font-family: Outfit;
- .font-Ovo{font-family: ovo, sans-serif; lighthover: '#fcf4ff'; darkHover: "#2a004a", darkTheme "1101F";}
- .font-outfit{font-family: Outfit, sans-serif; lighthover: '#fcf4ff'; darkHover: "#2a004a", darkTheme "1101F";}
- 
+* {
+  font-family: Outfit, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+.font-Ovo {
+  font-family: Ovo, serif;
+}
+
+.font-outfit {
+  font-family: Outfit, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth scrolling */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #2563eb, #7c3aed);
+}
+
+/* Box shadows */
 .box-shadow-custom {
   box-shadow: 4px 4px 0 #000;
 }
@@ -22,5 +62,57 @@ font-family: Outfit;
 .gridTemplateColumns {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
- 
 
+/* Selection color */
+::selection {
+  background-color: #3b82f6;
+  color: white;
+}
+
+::-moz-selection {
+  background-color: #3b82f6;
+  color: white;
+}
+
+/* Focus styles */
+*:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Image optimization */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+}

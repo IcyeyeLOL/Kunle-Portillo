@@ -7,7 +7,7 @@ import { motion } from 'motion/react'
 const About = () => {
   return (
     <section id="about" className='relative w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-20 sm:py-28 lg:py-32 scroll-mt-20 bg-white'>
-      <div className='max-w-13xl mx-auto'>
+      <div className='max-w-7xl mx-auto'>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -59,21 +59,21 @@ const About = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
             transition={{ duration: 0.8 }}
-            className='space-y-8 order-1 lg:order-2 w-full'
+            className='space-y-8 order-1 lg:order-2 w-full max-w-lg'
           >
-            <p className='text-lg sm:text-xl text-gray-700 leading-relaxed font-Ovo max-w-4xl'>
+            <p className='text-lg sm:text-xl text-gray-700 leading-relaxed font-Ovo'>
               Hello! I'm <span className='font-semibold text-gray-900'>Kunle Ajani</span>, a passionate Full Stack Developer based in Maryland. 
               I specialize in creating dynamic, responsive web applications that combine beautiful design with robust functionality.
             </p>
             
-            <p className='text-base sm:text-lg text-gray-600 leading-relaxed font-Ovo max-w-4xl'>
+            <p className='text-base sm:text-lg text-gray-600 leading-relaxed font-Ovo'>
               With years of freelance experience, I've developed a diverse skill set that allows me to tackle complex challenges 
               and deliver high-quality solutions. Whether it's building intuitive user interfaces or optimizing server-side performance, 
               I strive to enhance user experiences through innovative design and efficient coding practices.
             </p>
             
             {/* Info Cards */}
-            <div className='grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 w-full'>
+            <div className='grid grid-cols-1 sm:grid-cols-3 gap-5 pt-4 justify-items-center'>
               {infoList.map(({icon, iconDark, title, description}, index) => (
                 <motion.div
                   key={index}
@@ -82,21 +82,21 @@ const About = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   whileHover={{ y: -4, scale: 1.02 }}
-                  className='group relative p-5 bg-gradient-to-br from-white to-gray-50 border border-gray-200 rounded-2xl hover:border-blue-300 hover:shadow-lg transition-all duration-300 cursor-pointer w-full'
+                  className='group relative p-6 bg-gradient-to-br from-white to-gray-50 border-2 border-gray-200 rounded-2xl hover:border-blue-400 hover:shadow-lg transition-all duration-300 cursor-pointer w-full flex flex-col h-full'
                 >
-                  <div className='flex items-center justify-center w-12 h-12 mb-3 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 group-hover:from-blue-100 group-hover:to-purple-100 transition-colors'>
-                    <Image src={icon} alt={title} className='w-6 h-6' width={24} height={24}/>
+                  <div className='flex items-center justify-center w-14 h-14 mb-4 rounded-xl bg-gradient-to-br from-blue-50 to-purple-50 group-hover:from-blue-100 group-hover:to-purple-100 transition-colors shadow-sm'>
+                    <Image src={icon} alt={title} className='w-7 h-7' width={28} height={28}/>
                   </div>
-                  <h4 className='text-base font-bold font-Ovo mb-2 text-gray-900'>{title}</h4>
-                  <p className='text-xs sm:text-sm text-gray-600 leading-relaxed'>{description}</p>
+                  <h4 className='text-lg font-bold font-Ovo mb-2.5 text-gray-900'>{title}</h4>
+                  <p className='text-sm text-gray-600 leading-relaxed'>{description}</p>
                 </motion.div>
               ))}
             </div>
             
             {/* Tools Section */}
-            <div className='pt-6'>
+            <div className='pt-6 border-t border-gray-200 mt-8'>
               <h4 className='text-lg font-bold font-Ovo mb-4 text-gray-900'>Technologies & Tools</h4>
-              <div className='flex flex-wrap items-center gap-3'>
+              <div className='flex flex-wrap items-center justify-center lg:justify-start gap-3'>
                 {toolsData.map((tool, index) => (
                   <motion.div
                     key={index}
@@ -105,7 +105,7 @@ const About = () => {
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.05 }}
                     whileHover={{ y: -4, scale: 1.1, rotate: 5 }}
-                    className='flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-400 hover:shadow-md transition-all duration-300 cursor-pointer'
+                    className='flex items-center justify-center w-14 h-14 sm:w-16 sm:h-16 bg-white border-2 border-gray-200 rounded-xl hover:border-blue-400 hover:shadow-md transition-all duration-300 cursor-pointer shadow-sm'
                   >
                     <Image src={tool} alt='Tool' className='w-8 h-8 sm:w-10 sm:h-10 object-contain' width={40} height={40}/>
                   </motion.div>

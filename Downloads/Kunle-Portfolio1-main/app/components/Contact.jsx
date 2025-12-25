@@ -37,7 +37,7 @@ const Contact = () => {
 
   return (
     <section id="contact" className='relative w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-20 sm:py-28 lg:py-32 scroll-mt-20 bg-gradient-to-b from-gray-50 via-white to-blue-50/30'>
-      <div className='max-w-13xl mx-auto'>
+      <div className='max-w-4xl mx-auto'>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -71,34 +71,40 @@ const Contact = () => {
           viewport={{ once: true, margin: "-50px" }}
           transition={{ duration: 0.6, delay: 0.2 }}
           onSubmit={onSubmit}
-          className='space-y-6'
+          className='space-y-5'
         >
-          <div className='grid sm:grid-cols-2 gap-6'>
-            <motion.div whileFocus={{ scale: 1.02 }}>
+          <div className='grid sm:grid-cols-2 gap-5'>
+            <motion.div whileFocus={{ scale: 1.01 }} className='relative'>
+              <label htmlFor="name" className="sr-only">Your Name</label>
               <input
+                id="name"
                 type="text"
                 placeholder='Your Name'
-                className='w-full px-5 py-4 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 bg-white hover:border-gray-300'
+                className='w-full px-5 py-4 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 bg-white hover:border-gray-300 shadow-sm'
                 required
                 name='name'
               />
             </motion.div>
-            <motion.div whileFocus={{ scale: 1.02 }}>
+            <motion.div whileFocus={{ scale: 1.01 }} className='relative'>
+              <label htmlFor="email" className="sr-only">Your Email</label>
               <input
+                id="email"
                 type="email"
                 placeholder='Your Email'
-                className='w-full px-5 py-4 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 bg-white hover:border-gray-300'
+                className='w-full px-5 py-4 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 bg-white hover:border-gray-300 shadow-sm'
                 required
                 name='email'
               />
             </motion.div>
           </div>
           
-          <motion.div whileFocus={{ scale: 1.02 }}>
+          <motion.div whileFocus={{ scale: 1.01 }} className='relative'>
+            <label htmlFor="message" className="sr-only">Your Message</label>
             <textarea
+              id="message"
               placeholder='Your Message'
               rows={6}
-              className='w-full px-5 py-4 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 resize-none bg-white hover:border-gray-300'
+              className='w-full px-5 py-4 border-2 border-gray-200 rounded-xl text-gray-900 placeholder-gray-400 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition-all duration-300 resize-none bg-white hover:border-gray-300 shadow-sm'
               required
               name='message'
             ></textarea>

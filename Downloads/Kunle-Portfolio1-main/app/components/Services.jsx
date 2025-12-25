@@ -7,7 +7,7 @@ import { motion } from 'motion/react'
 const Services = () => {
   return (
     <section id="services" className='relative w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-20 sm:py-28 lg:py-32 scroll-mt-20 bg-gradient-to-b from-gray-50 to-white'>
-      <div className='max-w-13xl mx-auto'>
+      <div className='max-w-7xl mx-auto'>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -37,7 +37,7 @@ const Services = () => {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className='group relative p-6 lg:p-8 bg-white border-2 border-gray-200 rounded-2xl hover:border-blue-300 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden w-full max-w-sm'
+              className='group relative p-7 lg:p-8 bg-white border-2 border-gray-200 rounded-2xl hover:border-blue-400 hover:shadow-2xl transition-all duration-300 cursor-pointer overflow-hidden w-full max-w-sm flex flex-col h-full'
             >
               {/* Gradient overlay on hover */}
               <div className='absolute inset-0 bg-gradient-to-br from-blue-50/50 to-purple-50/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10'></div>
@@ -46,18 +46,18 @@ const Services = () => {
                 <motion.div
                   whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
                   transition={{ duration: 0.5 }}
-                  className='inline-flex items-center justify-center w-14 h-14 mb-5 rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 group-hover:from-blue-200 group-hover:to-purple-200 transition-colors'
+                  className='inline-flex items-center justify-center w-16 h-16 mb-6 rounded-xl bg-gradient-to-br from-blue-100 to-purple-100 group-hover:from-blue-200 group-hover:to-purple-200 transition-colors shadow-sm'
                 >
                   <Image 
                     src={icon} 
                     alt={title} 
-                    className='w-7 h-7'
-                    width={28}
-                    height={28}
+                    className='w-8 h-8'
+                    width={32}
+                    height={32}
                   />
                 </motion.div>
                 
-                <h3 className='text-xl font-bold mb-3 text-gray-900 font-Ovo'>{title}</h3>
+                <h3 className='text-xl font-bold mb-4 text-gray-900 font-Ovo'>{title}</h3>
                 <p className='text-sm text-gray-600 leading-relaxed mb-5'>{description}</p>
                 
                 <motion.a 

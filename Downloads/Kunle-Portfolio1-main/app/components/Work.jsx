@@ -7,7 +7,7 @@ import { motion } from 'motion/react'
 const Work = () => {
   return (
     <section id="work" className='relative w-full px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 py-20 sm:py-28 lg:py-32 scroll-mt-20 bg-white'>
-      <div className='max-w-13xl mx-auto'>
+      <div className='max-w-7xl mx-auto'>
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
